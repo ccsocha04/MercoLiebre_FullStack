@@ -5,12 +5,25 @@ body {
 
 header {
     background-color: #EAC926;
-    padding: 8px;
+    padding: 5px;
 }
 
 main {
-    background-color: #666;
-    padding: 8px;
+    background-color: grey;
+    margin: auto;
+    padding: 10px;
+    width: 90%;
+    text-align: center;
+}
+
+section {
+    padding: 5px;
+}
+
+article {
+    background-color: #FFFFFF;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
@@ -19,12 +32,30 @@ h2 {
 
 h3 {
     font-size: 16px;
+    text-align: left;
 }
 
 footer {
     background-color: #ebebeb;
     text-align: center;
+}
+
+.burger-menu {
+    width: 20px;
+    margin: 0 auto;
     padding: 8px;
+    text-align: center;
+}
+
+.imagen {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    text-align: left;
+    padding: 10px;
+    border-top: #ebebeb 3px solid;
 }
 
 .precios {
@@ -35,11 +66,8 @@ footer {
     font-size: 16px;
 }
 
-.burger-menu {
-    width: 20px;
-    text-align: center;
-    margin: 0 auto;
-    padding: 8px;
+.descripcion {
+    display: none;
 }
 
 .fa-bars {
@@ -62,5 +90,24 @@ footer {
 .fa-user-lock {
     font-size: 45px;
     color: #1259c3;;
+}
+
+@media (min-width: 361px) {
+    .descripcion {
+        padding: 10px;
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    main {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+
+@media (min-width: 769px) {
+    
 }
 
