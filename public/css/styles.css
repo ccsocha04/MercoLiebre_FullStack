@@ -1,3 +1,9 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -6,6 +12,7 @@ body {
 header {
     background-color: #EAC926;
     padding: 5px;
+    display: flex;
 }
 
 main {
@@ -13,10 +20,12 @@ main {
     margin: auto;
     padding: 10px;
     width: 90%;
-    text-align: center;
+    /* text-align: center; */
 }
 
 section {
+    display: flex;
+    flex-direction: column;
     padding: 5px;
 }
 
@@ -24,6 +33,25 @@ article {
     background-color: #FFFFFF;
     padding: 10px;
     margin-bottom: 10px;
+}
+
+main section article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    color: #39b54a;
+    position: absolute;
+    margin-top: -14px;
+}
+
+footer {
+    background-color: #ebebeb;
+    text-align: center;
 }
 
 h2 {
@@ -35,16 +63,12 @@ h3 {
     text-align: left;
 }
 
-footer {
-    background-color: #ebebeb;
-    text-align: center;
-}
-
 .burger-menu {
     width: 20px;
     margin: 0 auto;
     padding: 8px;
     text-align: center;
+    display: block;
 }
 
 .imagen {
@@ -56,14 +80,20 @@ footer {
     text-align: left;
     padding: 10px;
     border-top: #ebebeb 3px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .precios {
     font-size: 18px;
+    flex-grow: 0.3;
 }
 
 .descuentos {
     font-size: 16px;
+    flex-grow: 0.7;
+    color: #39b54a;
 }
 
 .descripcion {
@@ -98,10 +128,6 @@ footer {
         display: block;
     }
 
-    .burger-menu {
-        display: block;
-    }
-
     main {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
@@ -109,5 +135,21 @@ footer {
 
 @media (min-width: 769px) {
     
+    section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    article {
+        max-width: 48%;
+    }
+
+    .burger-menu {
+        display: none;
+    }
+
+
 }
 
