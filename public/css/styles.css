@@ -136,6 +136,73 @@ main section article i {
     display: none;
 }
 
+input:invalid {
+    border: red 4px solid;
+}
+
+.create-form {
+    padding: 20px 45px; 
+}
+
+.control-form {
+    margin-bottom: 15px;
+}
+
+.control-form label {
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+}
+
+.control-radio-form {
+    margin-bottom: 15px;
+}
+
+.control-radio-title-form{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.control-radio-element-form{
+    font-style: italic;
+    padding: 8px;
+}
+
+.control-checkbox-form {
+    margin-bottom: 15px;
+}
+
+.control-checkbox-title-form{
+    font-weight: bold;
+    font-style: italic;
+}
+
+.control-checkbox-element-form{
+    font-style: italic;
+    padding: 8px;
+}
+
+.control {
+    width: 100%;
+    padding: 8px;
+}
+
+.button-form-reset {
+    background-color: #03264C;
+    border: none;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.button-form-submit {
+    background-color: #39b54a;
+    border: none;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
 
 @media (min-width: 361px) {
     .descripcion {

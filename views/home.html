@@ -16,7 +16,17 @@
 <body>
     <header class="main-header">
         <div class="main-header-top-bar">
-            <img class="logo" src="/images/logo-mercado-liebre.svg" alt="Mercado Liebre">
+            <a href="/home">
+                <img class="logo" src="/images/logo-mercado-liebre.svg" alt="Mercado Liebre">
+            </a>
+            <form action="">
+                <div class="search-bar">
+                    <input type="text" placeholder="¿Qué estás buscando?">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </form>
             <h2 class="copy-header">
                 <i class="fas fa-hand-holding-usd"></i>
                 Comprá en cuotas y sin tarjeta de crédito
@@ -33,14 +43,13 @@
                 <li><a href="#">Ayuda</a></li>
             </ul>
             <ul class="right-navbar">
-                <li><a href="#">Creá tu cuenta <i class="fas fa-credit-card"></i></a></li>
-                <li><a href="#">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                <li><a href="/register">Creá tu cuenta <i class="fas fa-credit-card"></i></a></li>
+                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
     </header>
-    
-    
+
     <main class="main">
         <img class="banner" src="/images/img-home-banner.jpg" alt="Mercado Liebre Banner">
         <div class="main-subtitle">
@@ -159,8 +168,8 @@
 
     </main>
 
-    <!-- <footer>
-        <section>
+    <footer>
+    <!--     <section>
             <i class="fa-solid fa-thin fa-credit-card"></i>
             <h3>Pagá con tarjeta o en efectivo</h3>
             <p>
@@ -186,8 +195,8 @@
         </section>
         <section>
             <h3>Copyright © 1999-2020 MercadoLiebre S.R.L.</h3>
-        </section>
-    </footer> -->
+        </section> -->
+    </footer>
 </body>
 
 </html>
