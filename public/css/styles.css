@@ -20,6 +20,25 @@ body {
 .main-header {
     background-color: #EAC926;
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.main-header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-header-top-bar a {
+    flex-grow: 0.5;
+}
+
+.main-header-top-bar form {
+    flex-grow: 0.5;
 }
 
 .hamburger-button {
@@ -64,6 +83,7 @@ body {
 .banner {
     width: 100%;
     height: auto;
+    margin-top: 220px;
 }
 
 .main {
@@ -87,6 +107,12 @@ body {
     background-color: #ffffff;
     margin: 20px auto;
     padding: 10px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.article-view:hover {
+    box-shadow: 0px 0px 10px red;
 }
 
 main section article i {
@@ -99,9 +125,19 @@ main section article i {
     background-color: #FFF;
     color: #39b54a;
     border-radius: 50%;
-    position: relative;
-    right: 0px;
-    top: -15px;
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    animation: rotar 1000ms linear 2 alternate;
+}
+
+@keyframes rotar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-90deg);
+    }
 }
 
 .imagen {
@@ -130,9 +166,6 @@ main section article i {
 }
 
 .descripcion {
-    font-size: 16px;
-    color: #222222;
-    margin: 10px;
     display: none;
 }
 
@@ -141,7 +174,7 @@ input:invalid {
 }
 
 .create-form {
-    padding: 20px 45px; 
+    padding: 20px 45px;
 }
 
 .control-form {
@@ -193,6 +226,11 @@ input:invalid {
     color: #ffffff;
     padding: 15px;
     border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button-form-reset:hover {
+    background-color: red;
 }
 
 .button-form-submit {
@@ -201,21 +239,104 @@ input:invalid {
     color: #ffffff;
     padding: 15px;
     border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
+.button-form-submit:hover {
+    background-color: #1259c3;
+}
+
+.content-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.section-card {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.section-shipping {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.section-user {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+}
+
+.copyright {
+    background-color: #ebebeb;
+    color: #666666;
+    text-align: left;
+    padding: 30px;
+}
+
+.fa-buttom {
+    color: #1259c3;
+    max-width: 50px;
+    padding: 15px;
+    text-align: center;
+    font-size: 40px;
+    margin: auto;
+    transition: color 0.3s ease-in-out;
+}
+
+.fa-buttom:hover {
+    color: #39b54a;
+}
 
 @media (min-width: 361px) {
-    .descripcion {
-        display: block;
+
+    .banner {
+        margin-top: 192px;
     }
 
-    .article-view {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    .descripcion {
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #ffffff;
+        display: block;
+        margin: 0;
+        padding: 15px;
+        position: absolute;
+        font-size: 16px;
+        left: 0;
+        bottom: 45%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 450ms;
     }
+
+    .descripcion:hover {
+        opacity: 1;
+    }
+
+    main section article i {
+        bottom: 38px;
+    }
+
+    main section article i:hover {
+        transform: rotateZ(-90deg);
+        bottom: 38px;
+    }
+
 }
 
-
 @media (min-width: 769px) {
+
+    .banner {
+        margin-top: 128px;
+    }
 
     .main-header-top-bar {
         display: flex;
@@ -262,6 +383,10 @@ input:invalid {
         width: 250px;
     }
 
+    .banner {
+        margin-top: 138px;
+    }
+
     .main-header-top-bar,
     .main-navbar {
         max-width: 1200px;
@@ -300,6 +425,10 @@ input:invalid {
 
     .article-view {
         max-width: 22%;
+    }
+
+    .content-footer {
+        flex-direction: row;
     }
 
 }
